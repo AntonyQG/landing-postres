@@ -6,7 +6,7 @@ export default function MenuView() {
       <section className="mb-10">
         <div className="flex items-center gap-2 mb-4 px-2">
           <span className="material-symbols-outlined text-primary">cake</span>
-          <h3 className="text-xl font-extrabold text-slate-800 dark:text-white tracking-tight">Pasteles Favoritos</h3>
+          <h3 className="text-xl font-extrabold text-slate-800 tracking-tight">Pasteles Favoritos</h3>
         </div>
         <div className="grid grid-cols-1 gap-6">
           <MenuCard 
@@ -27,7 +27,7 @@ export default function MenuView() {
       <section className="mb-10">
         <div className="flex items-center gap-2 mb-4 px-2">
           <span className="material-symbols-outlined text-primary">bakery_dining</span>
-          <h3 className="text-xl font-extrabold text-slate-800 dark:text-white tracking-tight">Postres Caseros</h3>
+          <h3 className="text-xl font-extrabold text-slate-800 tracking-tight">Postres Caseros</h3>
         </div>
         <div className="grid grid-cols-2 gap-4">
           <GridCard 
@@ -46,9 +46,9 @@ export default function MenuView() {
       <section className="mb-4">
         <div className="flex items-center gap-2 mb-4 px-2">
           <span className="material-symbols-outlined text-primary">skillet</span>
-          <h3 className="text-xl font-extrabold text-slate-800 dark:text-white tracking-tight">Fruta con Chocolate</h3>
+          <h3 className="text-xl font-extrabold text-slate-800 tracking-tight">Fruta con Chocolate</h3>
         </div>
-        <div className="bg-white dark:bg-white/5 rounded-[2.5rem] p-5 shadow-sm border border-pink-100 dark:border-white/5">
+        <div className="bg-white rounded-[2.5rem] p-5 shadow-sm border border-pink-100">
           <div className="flex flex-col gap-4">
             <div className="w-full h-48 rounded-2xl overflow-hidden relative">
               <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLnwF8nxBg6iF39eJormYTOcjQMGCaAAtm-6SUSM_dhW1Twv207OhajXyzDHSycAEfh6Lzax9gjbrX1ZstxiCMaCu_JVQSMw2HMDF0wbmRlunbn_aN-nOa0zdjcUyt9ZpV9KY7xBzTnqvdsupLCQldyNC0UAibmg_RrfwCRAmVUxlJ9PsRVH1tsPfiImszgBVWSEQGDaraM9v44Xm5w5J-VFiR_RMGQ2aYsdBMq1Y7zIPCJePhKg7gwh-IKr4pXo3tyjIxALwWBX3y" className="w-full h-full object-cover" alt="Brochetas" />
@@ -56,10 +56,10 @@ export default function MenuView() {
             </div>
             <div>
               <div className="flex justify-between items-start mb-2">
-                <h4 className="text-lg font-bold text-slate-900 dark:text-white">Brochetas Deluxe</h4>
+                <h4 className="text-lg font-bold text-slate-900">Brochetas Deluxe</h4>
                 <span className="text-primary font-bold text-lg">Desde $35</span>
               </div>
-              <p className="text-sm text-slate-500 dark:text-slate-400 mb-4">Brocheta de fresa, plátano y bombón cubierta con chocolate oscuro o blanco y toppings a elegir.</p>
+              <p className="text-sm text-slate-500 mb-4">Brocheta de fresa, plátano y bombón cubierta con chocolate oscuro o blanco y toppings a elegir.</p>
               <motion.button whileTap={{ scale: 0.95 }} className="w-full py-3 bg-primary text-white text-sm font-bold rounded-xl shadow-lg shadow-primary/20 hover:bg-primary/90 transition-colors flex items-center justify-center gap-2">
                 <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"></path>
@@ -76,8 +76,8 @@ export default function MenuView() {
 
 function MenuCard({ title, desc, price, img, icon }: any) {
   return (
-    <motion.div whileHover={{ y: -2 }} className="bg-white dark:bg-white/5 rounded-[2rem] p-4 shadow-sm border border-pink-100 dark:border-white/5 flex gap-4">
-      <div className="w-28 h-28 shrink-0 rounded-2xl overflow-hidden relative bg-slate-200 dark:bg-slate-700 flex items-center justify-center">
+    <motion.div whileHover={{ y: -2 }} className="bg-white rounded-[2rem] p-4 shadow-sm border border-pink-100 flex gap-4">
+      <div className="w-28 h-28 shrink-0 rounded-2xl overflow-hidden relative bg-slate-200 flex items-center justify-center">
         {img ? (
           <img src={img} className="w-full h-full object-cover" alt={title} />
         ) : (
@@ -86,8 +86,8 @@ function MenuCard({ title, desc, price, img, icon }: any) {
       </div>
       <div className="flex flex-col justify-between py-1 flex-1">
         <div>
-          <h4 className="font-bold text-slate-900 dark:text-white leading-tight mb-1">{title}</h4>
-          <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-2">{desc}</p>
+          <h4 className="font-bold text-slate-900 leading-tight mb-1">{title}</h4>
+          <p className="text-xs text-slate-500 line-clamp-2">{desc}</p>
         </div>
         <div className="flex items-center justify-between mt-2">
           <span className="text-sm font-semibold text-primary">Desde {price}</span>
@@ -102,12 +102,12 @@ function MenuCard({ title, desc, price, img, icon }: any) {
 
 function GridCard({ title, price, img }: any) {
   return (
-    <motion.div whileHover={{ y: -2 }} className="bg-white dark:bg-white/5 rounded-[2rem] p-3 shadow-sm border border-pink-100 dark:border-white/5 flex flex-col">
+    <motion.div whileHover={{ y: -2 }} className="bg-white rounded-[2rem] p-3 shadow-sm border border-pink-100 flex flex-col">
       <div className="w-full aspect-square rounded-2xl overflow-hidden mb-3 relative group">
         <img src={img} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt={title} />
         <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors"></div>
       </div>
-      <h4 className="font-bold text-slate-900 dark:text-white text-sm mb-1">{title}</h4>
+      <h4 className="font-bold text-slate-900 text-sm mb-1">{title}</h4>
       <p className="text-primary font-bold text-xs mb-3">Desde {price}</p>
       <button className="w-full py-2 bg-soft-pink text-primary text-xs font-bold rounded-xl hover:bg-pink-200 transition-colors mt-auto">
         Ver más

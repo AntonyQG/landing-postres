@@ -3,6 +3,7 @@
 @theme {
   --color-primary: #ec135b;
   --color-background-light: #f8f6f6;
+  --color-background-pink: #fff5f7;
   --color-background-dark: #221016;
   --color-soft-pink: #fce7f3;
   --color-secondary: #ffa7c4;
@@ -16,25 +17,21 @@ body {
   font-family: var(--font-display);
   background-color: var(--color-background-light);
   color: #0f172a;
+  transition: background-color 0.3s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--color-background-dark);
-    color: #f1f5f9;
-  }
+body.theme-light {
+  background-color: var(--color-background-light);
+}
+
+body.theme-pink {
+  background-color: var(--color-background-pink);
 }
 
 .glass-panel {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-}
-
-@media (prefers-color-scheme: dark) {
-  .glass-panel {
-    background: rgba(34, 16, 22, 0.7);
-  }
 }
 
 .font-variation-settings-\'FILL\'1 {
@@ -44,6 +41,7 @@ body {
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -53,10 +51,4 @@ body {
   background-color: #e5e5f7;
   background-image: linear-gradient(#d1d5db 1px, transparent 1px), linear-gradient(to right, #d1d5db 1px, #e5e5f7 1px);
   background-size: 20px 20px;
-}
-@media (prefers-color-scheme: dark) {
-  .map-pattern {
-    background-color: #1a0c10;
-    background-image: linear-gradient(#374151 1px, transparent 1px), linear-gradient(to right, #374151 1px, #1a0c10 1px);
-  }
 }

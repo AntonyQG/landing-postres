@@ -4,8 +4,8 @@ export default function PromosView() {
   return (
     <div className="px-5">
       <div className="mb-6">
-        <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-2">Ofertas del Mes</h1>
-        <p className="text-slate-500 dark:text-slate-400 text-sm">Aprovecha nuestras promociones exclusivas por tiempo limitado.</p>
+        <h1 className="text-3xl font-extrabold text-slate-900 mb-2">Ofertas del Mes</h1>
+        <p className="text-slate-500 text-sm">Aprovecha nuestras promociones exclusivas por tiempo limitado.</p>
       </div>
 
       <div className="flex flex-col gap-6 mb-8">
@@ -28,7 +28,7 @@ export default function PromosView() {
       </div>
 
       <div className="mb-6">
-        <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 px-1">Más Delicias</h3>
+        <h3 className="text-xl font-bold text-slate-900 mb-4 px-1">Más Delicias</h3>
         <div className="grid grid-cols-2 gap-4">
           <MiniPromo 
             title="Caja Sorpresa"
@@ -42,16 +42,16 @@ export default function PromosView() {
           />
           <div className="col-span-2 bg-gradient-to-r from-secondary/20 to-primary/10 p-5 rounded-3xl flex items-center justify-between border border-secondary/20">
             <div className="flex-1 pr-4">
-              <div className="inline-flex items-center px-2 py-0.5 rounded-md bg-white/50 dark:bg-white/10 text-[10px] font-bold text-primary mb-1 uppercase tracking-wider">
+              <div className="inline-flex items-center px-2 py-0.5 rounded-md bg-white/50 text-[10px] font-bold text-primary mb-1 uppercase tracking-wider">
                 Delivery Gratis
               </div>
-              <h4 className="font-bold text-slate-900 dark:text-white text-base leading-tight">En pedidos superiores a $25</h4>
+              <h4 className="font-bold text-slate-900 text-base leading-tight">En pedidos superiores a $25</h4>
               <button className="mt-2 text-xs font-bold text-primary flex items-center gap-1 hover:underline">
                 Consultar zona
                 <span className="material-symbols-outlined text-[14px]">arrow_forward</span>
               </button>
             </div>
-            <div className="w-16 h-16 bg-white dark:bg-white/10 rounded-full flex items-center justify-center text-primary shadow-sm shrink-0">
+            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-primary shadow-sm shrink-0">
               <span className="material-symbols-outlined text-3xl">local_shipping</span>
             </div>
           </div>
@@ -84,12 +84,12 @@ function PromoCard({ title, desc, badge, badgeIcon, badgeColor, img }: any) {
 
 function MiniPromo({ title, discount, img }: any) {
   return (
-    <motion.div whileHover={{ y: -2 }} className="bg-surface-light dark:bg-surface-dark p-4 rounded-3xl shadow-sm border border-slate-100 dark:border-white/5 flex flex-col items-center text-center gap-3 hover:border-primary/30 transition-colors">
+    <motion.div whileHover={{ y: -2 }} className="bg-surface-light p-4 rounded-3xl shadow-sm border border-slate-100 flex flex-col items-center text-center gap-3 hover:border-primary/30 transition-colors">
       <div className="w-20 h-20 rounded-2xl overflow-hidden shadow-md">
         <img src={img} className="w-full h-full object-cover" alt={title} />
       </div>
       <div>
-        <h4 className="font-bold text-slate-900 dark:text-white text-sm">{title}</h4>
+        <h4 className="font-bold text-slate-900 text-sm">{title}</h4>
         <p className="text-primary font-extrabold text-sm">{discount}</p>
         <button className="text-xs text-slate-400 mt-1 inline-block underline decoration-slate-300">Ver detalles</button>
       </div>

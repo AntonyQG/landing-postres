@@ -44,7 +44,7 @@ export default function Header({ activeTab }: { activeTab: Tab }) {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-4 pt-4 pb-2">
-      <div className="glass-panel rounded-full flex items-center justify-between px-4 py-3 shadow-sm border border-white/20 dark:border-white/5">
+      <div className="glass-panel rounded-full flex items-center justify-between px-4 py-3 shadow-sm border border-white/20">
         <button className="flex items-center justify-center text-primary hover:bg-primary/10 rounded-full p-1 transition-colors">
           <span className="material-symbols-outlined">menu</span>
         </button>
